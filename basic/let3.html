@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //hoisting Hosting, o elevación es el comportamiento por defecto de JavaScript
+      //de “mover declaraciones al principio” del código. Hosting es un término que se
+      // puede encontrar a partir de ECMAScript® 2015 Language Specification.
+      // Es cierto que el término y concepto pueden ser un poco confusos a veces, pero
+      // piénsalo como una forma de referirse “al funcionamiento de los contextos de ejecución
+      // en JavaScript” que vimos en los “Conceptos fundamentales” de las semanas anteriores.
+      //carName = "Volvo";
+      //let no permite hacer un hoisting
+      carName = "Volvo";
+      carName2 = "Saab";
+
+      var carName;
+      let carName2;
+
+      console.log(carName);
+      console.log(carName2);
+    </script>
+  </body>
+</html>

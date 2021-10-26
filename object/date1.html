@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let now = new Date();
+
+      document.write(now + "<br>");
+      document.write("year : " + now.getFullYear() + "<br>");
+      document.write("month :" + now.getMonth() + "<br>");
+      document.write("date : " + now.getDate() + "<br>");
+      document.write("hour : " + now.getHours() + "<br>");
+      document.write("minutes : " + now.getMinutes() + "<br>");
+      document.write("seconds: " + now.getSeconds() + "<br>");
+      document.write(typeof now, "<br>");
+      document.write("format 1 : " + now.toDateString(), "<br>");
+      document.write("format 2 : " + now.toLocaleString(), "<br>");
+      document.write("format 3 : " + now.toLocaleDateString() + "<br>");
+
+      document.write("<br>");
+      let date = new Date(2021, 10, 26);
+      document.write(date + "<br>");
+      document.write("year : " + date.getFullYear() + "<br>");
+      document.write("month :", date.getMonth() + 1, "<br>");
+      document.write("date : " + date.getDate() + "<br>");
+    </script>
+  </body>
+</html>

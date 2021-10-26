@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let kor = Number(prompt("Korean introduce una calificacion"));
+      let math = Number(prompt("English introduce una calificacion"));
+      let eng = Number(prompt("Spanish introduce una calificacion"));
+
+      let average = (kor + math + eng) / 3;
+
+      switch (parseInt(average / 10)) {
+        case 10:
+        case 9:
+          console.log("A");
+          break;
+        case 8:
+          console.log("B");
+          break;
+        case 7:
+          console.log("C");
+          break;
+        case 6:
+          console.log("D");
+          break;
+        default:
+          console.log("F");
+          break;
+      }
+    </script>
+  </body>
+</html>
