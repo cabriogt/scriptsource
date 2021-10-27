@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <label for="userid">Id</label>
+        <input type="text" name="userid" id="userid" />
+      </div>
+      <div>
+        <label for="password">password</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <label for="username">username</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <button type="submit" onclick="process()">submit</button>
+    </form>
+    <script>
+      function process() {
+        event.preventDefault();
+
+        let userid = document.querySelector("#userid");
+        console.log(userid);
+
+        let password = document.querySelector("#password");
+
+        let username = document.querySelector("#username");
+
+        console.log(userid.value);
+
+        if (userid.value == "") {
+          alert("check your id");
+          userid.focus();
+          return;
+        }
+
+        if (password.value == "") {
+          alert("check your pass");
+          userid.focus();
+          return;
+        }
+
+        if (username.value == "") {
+          alert("check your username");
+          userid.focus();
+          return;
+        }
+
+        document.querySelector("form").submit();
+      }
+    </script>
+  </body>
+</html>

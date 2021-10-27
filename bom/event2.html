@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--onchange-->
+    <form action="">
+      <div>
+        <label for="userid">ID</label>
+        <input type="text" name="userid" id="userid" onchange="lower(this)" />
+      </div>
+      <div>
+        <label for="username">username</label>
+        <input type="text" name="username" id="username" onblur="lower(this)" />
+      </div>
+
+      <button type="button" onclick="process()">send</button>
+    </form>
+    <script>
+      //   function lower(obj) {
+      //     obj.value = obj.value.toLowerCase();
+      //   }
+
+      function lower(obj) {
+        obj.value = obj.value.toLowerCase();
+        alert("alert");
+      }
+    </script>
+  </body>
+</html>

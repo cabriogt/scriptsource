@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div * {
+        padding: 10px;
+        margin: 10px;
+      }
+
+      [readonly] {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>name game</h3>
+    <p>algo de un juego</p>
+    <div>
+      <label for="num1">num1</label>
+      <input type="text" name="num1" id="num1" size="5" />
+      <button type="button" onclick="guess()">start</button>
+    </div>
+    <div>
+      <label for="count">count</label>
+      <input type="text" name="count" id="count" size="5" readonly />
+    </div>
+    <div>
+      <label for="hint">hint</label>
+      <input type="text" name="hint" id="hint" readonly />
+    </div>
+    <script>
+      const random = Math.floor(Math.random() * 100) + 1;
+
+      let nGuess = 0;
+
+      function guess() {
+        let num1 = document.querySelector("#num1").value;
+        nGuess++;
+        document.querySelector("#count").value = nGuess;
+        let result = "";
+
+        if (num1 < random) {
+          result = "is correct";
+        } else if (num1 > random) {
+          result = "againg";
+        } else if (random == num1) {
+          result = "fail";
+        }
+
+        document.querySelector("#hint").value = result;
+      }
+    </script>
+  </body>
+</html>

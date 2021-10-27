@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="" id="" onchange="fruit(this)">
+      <option value="sandia">sandia</option>
+      <option value="mango">mango</option>
+      <option value="banana">banana</option>
+      <option value="manzana">manzana</option>
+      <option value="fresa">fresa</option>
+    </select>
+    <div>
+      <input
+        type="radio"
+        name="gender"
+        onchange="gender(this)"
+        value="men"
+      />men
+      <input
+        type="radio"
+        name="gender"
+        onchange="gender(this)"
+        value="fem"
+      />fem
+    </div>
+    <script>
+      function fruit(obj) {
+        //let fruits = document.querySelector("select");
+        //alert(fruits.options[fruits.selectedIndex].value);
+        alert(obj.options[obj.selectedIndex].value);
+      }
+
+      function gender(obj) {
+        alert(obj.value);
+      }
+    </script>
+  </body>
+</html>
